@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 import ProfileImage from "@/components/ui/profile-image"
+import { Link } from "@radix-ui/react-navigation-menu"
 
 export default function HeroSection() {
   const textRef = useRef<HTMLHeadingElement>(null)
@@ -140,13 +141,19 @@ export default function HeroSection() {
                 <Mail className="w-4 h-4 mr-2" />
                 bhoma090105@gmail.com
               </Button>
-              <Button variant="outline" className="border-gray-700 bg-black/50 hover:bg-gray-800 backdrop-blur-sm">
+              <Button variant="outline" className="border-gray-700 bg-black/50 hover:bg-gray-800 backdrop-blur-sm" asChild>
+             
+                
+                <a href="https://github.com/Bhoumik09" target="_blank">
                 <Github className="w-4 h-4 mr-2" />
-                GitHub
+                Github</a>
               </Button>
-              <Button variant="outline" className="border-gray-700 bg-black/50 hover:bg-gray-800 backdrop-blur-sm">
-                <Linkedin className="w-4 h-4 mr-2" />
-                LinkedIn
+              <Button variant="outline" className="border-gray-700 bg-black/50 hover:bg-gray-800 backdrop-blur-sm" asChild >
+                    <a href="https://www.linkedin.com/in/bhoumik-chopra-7999a6250/" target="_blank">
+                                    <Linkedin className="w-4 h-4 mr-2" />
+
+                    Linkedin</a>
+
               </Button>
             </motion.div>
           </motion.div>
